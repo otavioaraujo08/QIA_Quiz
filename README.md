@@ -13,19 +13,15 @@ para uso nas atividades do laboratório de informática.
 O projeto tem como contexto atender a escola E M E I F Prefeito Laurival Cunha  localizada na Ilha das Onças no munícipio de Barcarena no estado do Pará. A instituição de ensino enfrenta grandes desafios, um deles consiste em utilizar melhor o espaço do laboratório de informática para atender os alunos em suas atividades disciplinares.
 
 ## 🔧 Funcionalidades do produto
-````
  - Função Básica de Quiz (Usuário Ler e Responder Perguntas) 
  - Função Feedback da pontuação do usuário 
  - Função Criação de Edição de Quiz (Adicionando pesos a cada pergunta que serão utilizados na pontuação)
  - Função de Gerenciamento de Quiz (opção visualizar, editar e apagar)
-````
 
 ## 💻 Tecnologias utilizadas
-````
  - Frontend: Vuejs
  - Backend: Nodejs
  - ElectronJs
-````
 
 ## 👨‍👨‍👧‍👦 Integrantes
 <table>
@@ -46,9 +42,7 @@ O projeto tem como contexto atender a escola E M E I F Prefeito Laurival Cunha  
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/D4E35AQEOUdFCCOPbvQ/profile-framedphoto-shrink_800_800/0/1635970497374?e=2147483647&v=beta&t=MkoA1Sjy5wkIjaYU7oEtH9PLJb6CChDPh0ToZbNxHCM" width="100px;" alt=""/>
  <br />
  <sub><b>Matheus Lopes</b></sub></a> <a href="https://media-exp1.licdn.com/dms/image/D4E35AQEOUdFCCOPbvQ/profile-framedphoto-shrink_800_800/0/1635970497374?e=2147483647&v=beta&t=MkoA1Sjy5wkIjaYU7oEtH9PLJb6CChDPh0ToZbNxHCM" title="matheus"></a></td>
-  </tr>
- <tr>
-    <td align="center"><a href="https://github.com/otavioaraujo08">
+   <td align="center"><a href="https://github.com/otavioaraujo08">
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQFTMsn7SV__kg/profile-displayphoto-shrink_800_800/0/1596549650010?e=1655942400&v=beta&t=XcLwl72BTs0mazX1ZLypS4cKYq1oasH4Fpa3Q0gVgdQ" width="100px;" alt=""/>
  <br />
  <sub><b>Otávio Araújo</b></sub></a> <a href="https://media-exp1.licdn.com/dms/image/C4D03AQFTMsn7SV__kg/profile-displayphoto-shrink_800_800/0/1596549650010?e=1655942400&v=beta&t=XcLwl72BTs0mazX1ZLypS4cKYq1oasH4Fpa3Q0gVgdQ" title="otavio"></a>
