@@ -12,7 +12,9 @@ para uso nas atividades do laboratório de informática.
 
 O projeto tem como contexto atender a escola E M E I F Prefeito Laurival Cunha  localizada na Ilha das Onças no munícipio de Barcarena no estado do Pará. A instituição de ensino enfrenta grandes desafios, um deles consiste em utilizar melhor o espaço do laboratório de informática para atender os alunos em suas atividades disciplinares.
 
-<img width="700px;" src="https://files.slack.com/files-pri/T0321LHKZHB-F034CGCSUKY/20220224_113337.jpg?pub_secret=1af96f9fc6" />
+<div align="center">
+  <img width="700px;" src="https://files.slack.com/files-pri/T0321LHKZHB-F034CGCSUKY/20220224_113337.jpg?pub_secret=1af96f9fc6" />
+ </div>
 
 ## 🔧 Funcionalidades do produto
  - Função Básica de Quiz (Usuário Ler e Responder Perguntas) 
