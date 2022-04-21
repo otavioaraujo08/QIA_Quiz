@@ -25,6 +25,24 @@ O projeto tem como contexto atender a escola E M E I F Prefeito Laurival Cunha  
  - Backend: <a href="https://nodejs.org/en/">Nodejs</a>
  - <a href="https://www.electronjs.org/">ElectronJs </a>
 
+## Clonando o Repositório
+
+```bash
+# Clone este repositório 🕹️
+$ git clone https://github.com/otavioaraujo08/QIA_Quiz.git
+
+# Entrar no diretório do projeto 📁
+$ cd qia_quiz
+
+# Instalando as dependências 💡
+$ npm i
+
+# Execute a aplicação em modo de desenvolvimento 🔓
+$ npm run electron:serve
+
+# O servidor inciará na porta:8080 - acesse <http://localhost:8080/> 🧲
+```
+
 ## 👨‍👨‍👧‍👦 Integrantes
 <table>
   <tr>
