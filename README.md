@@ -25,7 +25,7 @@ O projeto tem como contexto atender a escola E M E I F Prefeito Laurival Cunha  
  - Backend: <a href="https://nodejs.org/en/">Nodejs</a>
  - <a href="https://www.electronjs.org/">ElectronJs </a>
 
-## 🥰 Clonando o Repositório
+## 📁 Clonando o Repositório
 
 ```bash
 # Clone este repositório 🕹️
