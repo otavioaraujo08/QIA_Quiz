@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+      <h1>Olá mundo</h1>
     <logo />
     <button type="button" class="btn btn-lg btn-success">Entrar</button>
   </div>
