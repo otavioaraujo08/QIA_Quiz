@@ -9,7 +9,10 @@
 
 .teacher h3{
   color: #fff;
-  margin-bottom: 50px;
+}
+
+.teacher button{
+  border: none;
 }
 
 .input-group{
