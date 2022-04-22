@@ -1,8 +1,17 @@
-.home{
+.teacher{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
   height: 100vh;
+}
+
+.teacher h3{
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.input-group{
+  width: 40% !important;
 }

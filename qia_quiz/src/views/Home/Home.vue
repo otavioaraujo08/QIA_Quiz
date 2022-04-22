@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <logo />
-    <button type="button" class="btn btn-lg btn-success">Entrar</button>
+    <router-link to="/Login">
+      <button type="button" class="btn btn-lg btn-success">Entrar</button>
+    </router-link>
   </div>
 </template>
 

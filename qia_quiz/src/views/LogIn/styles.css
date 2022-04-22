@@ -1,0 +1,23 @@
+.login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.login h3{
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons button{
+  padding: 20px;
+}
