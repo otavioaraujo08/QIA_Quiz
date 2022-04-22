@@ -3,22 +3,48 @@
     <logo />
     <h3>Bem vindo, professor</h3>
     <div class="input-group">
-      <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
-      <input type="password" class="form-control" placeholder="Insira a sua senha">
-      <span class="input-group-text"><i class="fa-solid fa-eye-slash"></i></span>
+      <span class="input-group-text" id="basic-addon1"
+        ><i class="fa-solid fa-lock"></i
+      ></span>
+      <input
+        v-model="password"
+        :type="passwordFieldType"
+        class="form-control"
+        placeholder="Insira a sua senha"
+      />
+      <span class="input-group-text">
+        <button type="password" @click="switchVisibility">
+          <i class="fa-solid fa-eye-slash"></i>
+        </button
+      ></span>
+    </div>
+    <div class="mt-2 d-flex flex-column">
+      <button class="btn btn-lg btn-success" :disabled="!password.length">Fazer Login</button>
     </div>
   </div>
 </template>
 
 <script>
-
-import Logo from "../../components/Logo/Logo.vue"
-import "./styles.css"
+import Logo from "../../components/Logo/Logo.vue";
+import "./styles.css";
 
 export default {
   components: {
-    Logo
+    Logo,
   },
-  name: 'LogInView',
-}
+  name: "LogInView",
+  data() {
+    return {
+      password: "",
+      correctPassword: "qiaquiz",
+      passwordFieldType: "password",
+    };
+  },
+  methods: {
+    switchVisibility() {
+      this.passwordFieldType =
+        this.passwordFieldType === "password" ? "text" : "password";
+    },
+  },
+};
 </script>
