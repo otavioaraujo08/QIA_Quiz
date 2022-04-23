@@ -1,0 +1,21 @@
+.manage{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+  width: 80%;
+}
+
+.manage nav{
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.manage h3{
+  margin-left: 10px;
+}
+
+.manage tbody, .manage thead{
+  background: #fff;
+}

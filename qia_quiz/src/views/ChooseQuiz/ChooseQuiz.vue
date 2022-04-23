@@ -1,19 +1,21 @@
 <template>
-  <div class="login">
+  <div class="choose">
     <back-button 
-      :route="'/'"
+      :route="'/TeacherPassword'"
     />
     <logo />
-    <h3>Escolha uma opção</h3>
-    <div class="buttons">
+    <h3>Você deseja?</h3>
+    <div class="mt-3">
       <router-link to="/TeacherPassword">
         <button type="button" class="btn btn-lg btn-success">
-          <i class="fa-solid fa-user-tie"></i> Entrar como professor
+          <i class="fa-solid fa-circle-plus"></i> Criar Quiz
         </button>
       </router-link>
-      <router-link to="/Student">
+    </div>
+    <div class="mt-3">
+      <router-link to="/ManageQuiz">
         <button type="button" class="btn btn-lg btn-danger">
-          <i class="fa-solid fa-chalkboard-user"></i> Entrar como aluno
+          <i class="fa-solid fa-pen-to-square"></i> Gerenciar Quiz
         </button>
       </router-link>
     </div>
@@ -30,6 +32,6 @@ export default {
     Logo,
     BackButton,
   },
-  name: "LogInView",
+  name: "ChooseQuizView",
 };
 </script>

@@ -1,5 +1,8 @@
 <template>
   <div class="teacher">
+    <back-button 
+      :route="'/Login'"
+    />
     <logo />
     <h3>Bem vindo, professor</h3>
     <div class="input-group">
@@ -19,18 +22,22 @@
       ></span>
     </div>
     <div class="mt-2 d-flex flex-column">
-      <button class="btn btn-lg btn-success" :disabled="!password.length">Fazer Login</button>
+      <router-link to="/ChooseQuiz">
+        <button class="btn btn-lg btn-success" :disabled="!password.length">Fazer Login</button>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 import Logo from "../../components/Logo/Logo.vue";
+import BackButton from "../../components/BackButton/BackButton.vue";
 import "./styles.css";
 
 export default {
   components: {
     Logo,
+    BackButton,
   },
   name: "LogInView",
   data() {
