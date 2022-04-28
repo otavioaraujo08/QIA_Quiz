@@ -5,6 +5,7 @@ import TeacherPassword from '../views/TeacherPassword/TeacherPassword.vue'
 import ChooseQuiz from '../views/ChooseQuiz/ChooseQuiz.vue'
 import ManageQuiz from '../views/ManageQuiz/ManageQuiz.vue'
 import Student from '../views/Student/Student.vue'
+import SetQuiz from '../views/SetQuiz/SetQuiz.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/Student',
     name: 'student',
     component: Student
+  },
+  {
+    path: '/SetQuiz',
+    name: 'SetQuiz',
+    component: SetQuiz
   },
 ]
 

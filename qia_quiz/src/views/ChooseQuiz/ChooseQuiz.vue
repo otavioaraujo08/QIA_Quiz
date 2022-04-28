@@ -6,7 +6,7 @@
     <logo />
     <h3>Você deseja?</h3>
     <div class="mt-3">
-      <router-link to="/TeacherPassword">
+      <router-link to="/SetQuiz">
         <button type="button" class="btn btn-lg btn-success">
           <i class="fa-solid fa-circle-plus"></i> Criar Quiz
         </button>

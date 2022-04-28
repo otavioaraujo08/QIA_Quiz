@@ -1,0 +1,21 @@
+.set{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+}
+
+.set nav{
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.set h3{
+  margin-left: 10px;
+}
+
+.input-group{
+  width: 100% !important;
+}
