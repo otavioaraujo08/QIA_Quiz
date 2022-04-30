@@ -6,7 +6,6 @@ import ChooseQuiz from '../views/ChooseQuiz/ChooseQuiz.vue'
 import ManageQuiz from '../views/ManageQuiz/ManageQuiz.vue'
 import Student from '../views/Student/Student.vue'
 import SetQuiz from '../views/SetQuiz/SetQuiz.vue'
-import EditQuiz from '../views/EditQuiz/EditQuiz.vue'
 import Questions from '../views/Questions/Questions.vue'
 import Score from '../views/Score/Score.vue'
 
@@ -42,14 +41,9 @@ const routes = [
     component: Student
   },
   {
-    path: '/SetQuiz',
+    path: '/SetQuiz/:id?',
     name: 'SetQuiz',
     component: SetQuiz
-  },
-  {
-    path: '/EditQuiz',
-    name: 'EditQuiz',
-    component: EditQuiz
   },
   {
     path: '/Questions',

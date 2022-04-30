@@ -15,39 +15,39 @@
     <hr>
     <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1">Professor</span>
-      <input type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
+      <input v-model="professor" type="text" class="form-control" placeholder="Nome" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1">Disciplina</span>
-      <input type="text" class="form-control" placeholder="Disciplina" aria-label="Username" aria-describedby="basic-addon1">
+      <input v-model="disciplina" type="text" class="form-control" placeholder="Disciplina" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1">Título</span>
-      <input type="text" class="form-control" placeholder="Título do quiz" aria-label="Username" aria-describedby="basic-addon1">
+      <input v-model="titulo" type="text" class="form-control" placeholder="Título do quiz" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+      <textarea v-model="comando" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
       <label for="floatingTextarea">Comando da questão</label>
     </div>
     <div class="d-flex flex-column">
       <div class="d-flex align-items-center justify-content-around mt-3">
         <div>
-          <input v-model="alternative1" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 1">
+          <input v-model="resposta" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 1">
         </div>
         <input class="form-check-input mt-0" type="checkbox" :value="checked" aria-label="Radio button for following text input">
         <div>
-          <input v-model="alternative2" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 2">
+          <input v-model="pergunta_n1" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 2">
         </div>
         <input class="form-check-input mt-0" type="checkbox" :value="checked" aria-label="Radio button for following text input">
       </div>
       <div class="d-flex align-items-center justify-content-around mt-3">
         <div>
-          <input v-model="alternative3" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 3">
+          <input v-model="pergunta_n2" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 3">
         </div>
         <input class="form-check-input mt-0" type="checkbox" :value="checked" aria-label="Radio button for following text input">
         
         <div>
-          <input v-model="alternative4" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 4">
+          <input v-model="pergunta_n3" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 4">
         </div>
         <input class="form-check-input mt-0" type="checkbox" :value="checked" aria-label="Radio button for following text input">
       </div>
@@ -58,7 +58,7 @@
         </div>
         <div>
           <router-link to="/ManageQuiz">
-            <button type="button" class="btn btn-success">Finalizar</button>
+            <button type="button" class="btn btn-success" @click="addItem()">Finalizar</button>
           </router-link>
         </div>
       </div>
@@ -68,6 +68,7 @@
 
 <script>
 import BackButton from "../../components/BackButton/BackButton.vue";
+import axios from "axios";
 import "./styles.css";
 
 export default {
@@ -75,14 +76,60 @@ export default {
   components: {
     BackButton,
   },
+
   data(){
     return{
-      alternative1: "",
-      alternative2: "",
-      alternative3: "",
-      alternative4: "",
+      items: [],
+      professor: "",
+      disciplina: "",
+      titulo: "",
+      comando: "",
+      resposta: "",
+      pergunta_n1: "",
+      pergunta_n2: "",
+      pergunta_n3: "",
       checked: false
     }
-  }
+  },
+
+  mounted(){
+    this.boughtItem(),
+    this.created()
+  },
+
+  methods: {
+    async created() {
+      try {
+        const res = await axios.get(`http://localhost:3000/professor_um`);
+        this.items = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async addItem() {
+      const res = await axios.post(`http://localhost:3000/professor_um`, {
+        professor: this.professor,
+        disciplina: this.disciplina,
+        titulo: this.titulo,
+        comando: this.comando,
+        resposta: this.resposta,
+        pergunta_n1: this.pergunta_n1,
+        pergunta_n2: this.pergunta_n2,
+        pergunta_n3: this.pergunta_n3,
+      });
+
+      this.items = [...this.items, res.data];
+    },
+
+    async boughtItem(id) {
+      try {
+        await axios.patch(`${`http://localhost:3000/professor_um`}/${id}`,{
+        });
+      }catch (error) {
+        console.error(error);
+      }
+    }
+  },
 };
 </script>

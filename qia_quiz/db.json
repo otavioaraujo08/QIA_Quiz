@@ -1,0 +1,15 @@
+{
+  "professor_um": [
+    {
+      "professor": "Marcos",
+      "disciplina": "Direção Perigosa",
+      "titulo": "Como dirigir com a carteira vencida",
+      "comando": "Se o pedestre atravessa o sinal vermelho, pode atropelar ?",
+      "resposta": "Claro que sim",
+      "pergunta_n1": "O contrário da segunda alternativa",
+      "pergunta_n2": "Obvio que não",
+      "pergunta_n3": "O contrário da primeira",
+      "id": 2
+    }
+  ]
+}
