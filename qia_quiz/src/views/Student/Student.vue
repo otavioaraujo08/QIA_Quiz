@@ -1,8 +1,6 @@
 <template>
   <div class="student">
-    <back-button 
-      :route="'/Login'"
-    />
+    <back-button :route="'/Login'" />
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-book"></i>
@@ -12,7 +10,7 @@
         <h3>Aluno</h3>
       </div>
     </nav>
-    <hr>
+    <hr />
     <table class="table">
       <thead>
         <tr>
@@ -27,35 +25,35 @@
         <tr>
           <th scope="row">1</th>
           <td>Funções de primeiro grau</td>
+          <td>Otávio</td>
+          <td>Matemática</td>
           <td>
-            Otávio
+            <router-link to="Questions">
+              <button type="button" class="btn btn-success">Fazer Quiz</button>
+            </router-link>
           </td>
-          <td>
-            Matemática
-          </td>
-          <td><button type="button" class="btn btn-success">Fazer Quiz</button></td>
         </tr>
         <tr>
           <th scope="row">2</th>
           <td>Sistema respiratório</td>
+          <td>Marcos</td>
+          <td>Biologia</td>
           <td>
-            Marcos
+            <router-link to="Questions">
+              <button type="button" class="btn btn-success">Fazer Quiz</button>
+            </router-link>
           </td>
-          <td>
-            Biologia
-          </td>
-          <td><button type="button" class="btn btn-success">Fazer Quiz</button></td>
         </tr>
         <tr>
           <th scope="row">3</th>
           <td>Estequiometria</td>
+          <td>Matheus</td>
+          <td>Química</td>
           <td>
-            Matheus
+            <router-link to="Questions">
+              <button type="button" class="btn btn-success">Fazer Quiz</button>
+            </router-link>
           </td>
-          <td>
-            Química
-          </td>
-          <td><button type="button" class="btn btn-success">Fazer Quiz</button></td>
         </tr>
       </tbody>
     </table>

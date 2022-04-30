@@ -5,7 +5,7 @@
     />
     <logo />
     <h3>Bem vindo, professor</h3>
-    <div class="input-group">
+    <div class="input-group" style="width: 40% !important;">
       <span class="input-group-text" id="basic-addon1"
         ><i class="fa-solid fa-lock"></i
       ></span>
