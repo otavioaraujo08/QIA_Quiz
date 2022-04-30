@@ -27,7 +27,9 @@
           <th scope="row">1</th>
           <td>Funções de primeiro grau</td>
           <td>
-            <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+            <router-link to="/EditQuiz">
+              <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+            </router-link>
           </td>
           <td>
             <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
@@ -37,7 +39,9 @@
           <th scope="row">2</th>
           <td>Funções de primeiro grau</td>
           <td>
-            <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+            <router-link to="/EditQuiz">
+              <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+            </router-link>
           </td>
           <td>
             <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
@@ -47,7 +51,9 @@
           <th scope="row">3</th>
           <td>Funções de primeiro grau</td>
           <td>
-            <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+            <router-link to="/EditQuiz">
+              <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
+            </router-link>
           </td>
           <td>
             <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>

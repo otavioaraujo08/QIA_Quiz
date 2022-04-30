@@ -1,12 +1,12 @@
 <template>
   <div class="set">
     <back-button 
-      :route="'/ChooseQuiz'"
+      :route="'/ManageQuiz'"
     />
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-circle-plus"></i>
-        <h3>Criar Quiz</h3>
+        <h3>Editar Quiz</h3>
       </div>
       <div>
         <h3>Professor</h3>
