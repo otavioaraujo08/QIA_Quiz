@@ -27,9 +27,7 @@
           <th scope="row">{{ item.id }}</th>
           <td>{{ item.titulo }}</td>
           <td>
-            <router-link to="/SetQuiz/id">
-              <button type="button" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></button>
-            </router-link>
+              <button type="button" class="btn btn-success" @click="editarCampos(item.id)"><i class="fa-solid fa-pen-to-square"></i></button>
           </td>
           <td>
             <button type="button" class="btn btn-danger" @click="removeItem(item.id)"><i class="fa-solid fa-trash"></i></button>
@@ -43,6 +41,7 @@
 <script>
 import axios from "axios";
 import BackButton from "../../components/BackButton/BackButton.vue";
+import { useRouter } from 'vue-router'
 import "./styles.css";
 
 export default {
@@ -50,6 +49,14 @@ export default {
 
   components: {
     BackButton,
+  },
+
+  setup(){
+    const router = useRouter()
+
+    return {
+      router
+    }
   },
 
   data() {
@@ -71,6 +78,10 @@ export default {
       } catch (error) {
         console.log(error);
       }
+    },
+
+    editarCampos(id) {
+      this.router.push({name: 'SetQuiz', params: {id} })
     },
 
     // Método Remove
