@@ -51,6 +51,14 @@
         </div>
         <input class="form-check-input mt-0" type="checkbox" :value="checked" aria-label="Radio button for following text input">
       </div>
+      <div class="d-flex align-items-center justify-content-around mt-3">
+        <div>
+          <input v-model="pontuacao" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pontuação">
+        </div>       
+        <div>
+          <input v-model="peso" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Peso">
+        </div>
+      </div>
       <div class="d-flex justify-content-between mt-3">
         <div>
           <button type="button" class="btn btn-primary">+ Questão</button>
@@ -88,6 +96,8 @@ export default {
       pergunta_n1: "",
       pergunta_n2: "",
       pergunta_n3: "",
+      pontuacao: "",
+      peso: "",
       checked: false
     }
   },
