@@ -39,9 +39,9 @@
 </template>
 
 <script>
-import axios from "axios";
-import BackButton from "../../components/BackButton/BackButton.vue";
-import { useRouter } from 'vue-router'
+import axios          from "axios";
+import BackButton     from "../../components/BackButton/BackButton.vue";
+import { useRouter }  from 'vue-router'
 import "./styles.css";
 
 export default {
