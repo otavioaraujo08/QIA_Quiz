@@ -1,0 +1,41 @@
+{
+  "quizes": [
+    {
+      "professor": "Otávio",
+      "disciplina": "Matematica",
+      "titulo": "Calcule a soma",
+      "pontuacao": "10",
+      "peso": "20",
+      "comando": "1 + 1",
+      "resposta": "2",
+      "pergunta_n1": "0",
+      "pergunta_n2": "1",
+      "pergunta_n3": "Batata",
+      "id": 1
+    },
+    {
+      "professor": "12",
+      "disciplina": "212121",
+      "titulo": "212121",
+      "comando": "212121",
+      "resposta": "2121",
+      "pergunta_n1": "212",
+      "pergunta_n2": "21212121",
+      "pergunta_n3": "1212",
+      "id": 2
+    },
+    {
+      "professor": "Otávio Teste",
+      "disciplina": "Artes FGeograficas",
+      "titulo": "Braianiac é um ? ? ?",
+      "pontuacao": "10",
+      "peso": "20",
+      "comando": "Sla mano bro",
+      "resposta": "????????",
+      "pergunta_n1": "2",
+      "pergunta_n2": "1",
+      "pergunta_n3": "3",
+      "id": 3
+    }
+  ]
+}

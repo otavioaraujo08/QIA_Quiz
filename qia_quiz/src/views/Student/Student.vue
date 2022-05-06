@@ -71,15 +71,15 @@ export default {
     // Chamando todos os itens do DB
     async created() {
       try {
-        const res = await axios.get(`http://localhost:3000/professor_um`);
+        const res = await axios.get(`http://localhost:3000/quizes`);
           this.items = res.data;
       } catch (error) {
         console.log(error);
       }
     },
 
-    realizarQuiz(id) {
-      this.router.push({name: 'Questions', params: {id} })
+    realizarQuiz(slug) {
+      this.router.push({name: 'Questions', params: {slug} })
     },
   }
 };

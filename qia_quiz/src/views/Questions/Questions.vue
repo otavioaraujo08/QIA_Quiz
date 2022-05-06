@@ -67,7 +67,7 @@ export default {
     // Receber os valores referentes aos quizes
     async receberQuiz(id) {
         try {
-          const data = await axios.patch(`${`http://localhost:3000/professor_um`}/${id}`,{});
+          const data = await axios.patch(`${`http://localhost:3000/quizes`}/${id}`,{});
           this.items = data.data
           this.item
         }catch (error) {
