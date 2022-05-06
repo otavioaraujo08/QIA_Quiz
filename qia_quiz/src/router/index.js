@@ -52,7 +52,7 @@ const routes = [
     component: Questions
   },
   {
-    path: '/Score',
+    path: '/Score/:id?', 
     name: 'Score',
     component: Score
   },
