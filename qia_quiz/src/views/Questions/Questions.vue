@@ -7,22 +7,52 @@
     <div class="d-flex flex-column">
       <div class="d-flex align-items-center justify-content-around mt-3">
         <div>
-          <button type="button" class="btn-lg btn-primary">{{this.items.resposta}}</button> 
+          <button 
+            type="button" 
+            class="btn-lg btn-primary"
+            @click="compararResposta(1)"
+          >
+            {{this.items.resposta}}
+          </button> 
         </div>
         <div>
-          <button type="button" class="btn-lg btn-success">{{this.items.pergunta_n1}}</button>
+          <button 
+            type="button" 
+            class="btn-lg btn-success"
+            @click="compararResposta(2)"
+          >
+            {{this.items.pergunta_n1}}
+          </button>
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-around mt-3">
         <div>
-          <button type="button" class="btn-lg btn-danger">{{this.items.pergunta_n2}}</button>
+          <button 
+            type="button" 
+            class="btn-lg btn-danger"
+            @click="compararResposta(3)"
+          >
+            {{this.items.pergunta_n2}}
+          </button>
         </div>
         <div>
-          <button type="button" class="btn-lg btn-warning">{{this.items.pergunta_n3}}</button>
+          <button 
+            type="button" 
+            class="btn-lg btn-warning"
+            @click="compararResposta(4)"
+            >
+             {{this.items.pergunta_n3}}
+          </button>
         </div>
       </div>
       <div>
-        <button type="button" class="btn-lg btn-primary" @click="finalizarQuiz(items.id)">Finalizar</button>
+        <button 
+          type="button" 
+          class="btn-lg btn-primary" 
+          @click="finalizarQuiz(items.id)"
+        >
+          Finalizar
+        </button>
       </div>
     </div>
   </div>
@@ -39,7 +69,7 @@ export default {
   data(){
     const route = useRouter()
     const routes = useRoute()
-    
+
     return{
       item: [],
       items: {
@@ -52,10 +82,12 @@ export default {
         pergunta_n2: "",
         pergunta_n3: "",
         pontuacao: "",
+        pontuacao_recebida: "",
         peso: ""
       },
       route,
-      routes
+      routes,
+      escolha: ""
     }
   },
 
@@ -69,16 +101,61 @@ export default {
         try {
           const data = await axios.patch(`${`http://localhost:3000/professor_um`}/${id}`,{});
           this.items = data.data
-          this.item
         }catch (error) {
           console.error(error);
         }
+    },
+
+    compararResposta(id) {
+      if(id === 1){
+        this.escolha = this.items.resposta
+
+        this.items.pontuacao_recebida = this.items.pontuacao
+        
+        this.salvarQuiz()
+
+        this.finalizarQuiz(this.items.id)
+      } else if (id === 2){
+        this.escolha = this.items.pergunta_n1
+
+        this.items.pontuacao_recebida = 0
+        
+        this.salvarQuiz()
+
+        this.finalizarQuiz(this.items.id)
+      } else if (id === 3){
+        this.escolha = this.items.pergunta_n2
+
+        this.items.pontuacao_recebida = 0
+        
+        this.salvarQuiz()
+
+        this.finalizarQuiz(this.items.id)
+      } else {
+        this.escolha = this.items.pergunta_n3
+
+        this.items.pontuacao_recebida = 0
+        
+        this.salvarQuiz()
+
+        this.finalizarQuiz(this.items.id)
+      }
     },
     
     // Finaliza o quiz e direciona para a tela do score
     finalizarQuiz(id) {
       this.route.push({name: 'Score', params: {id} })
-    }
+    },
+
+        // Salvar
+    async salvarQuiz() {
+      try {
+        const data = await axios.put(`${`http://localhost:3000/professor_um`}/${this.routes.params.id}`, this.items)
+        return data
+      } catch (error) {
+        console.error(error);
+      }
+    },
   }
 };
 </script>

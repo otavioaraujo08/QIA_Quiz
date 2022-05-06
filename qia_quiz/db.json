@@ -11,18 +11,8 @@
       "pergunta_n1": "0",
       "pergunta_n2": "1",
       "pergunta_n3": "Batata",
-      "id": 1
-    },
-    {
-      "professor": "12",
-      "disciplina": "212121",
-      "titulo": "212121",
-      "comando": "212121",
-      "resposta": "2121",
-      "pergunta_n1": "212",
-      "pergunta_n2": "21212121",
-      "pergunta_n3": "1212",
-      "id": 2
+      "id": 1,
+      "pontuacao_recebida": 0
     },
     {
       "professor": "Otávio Teste",
@@ -35,7 +25,8 @@
       "pergunta_n1": "2",
       "pergunta_n2": "1",
       "pergunta_n3": "3",
-      "id": 3
+      "id": 3,
+      "pontuacao_recebida": "10"
     }
   ]
 }
