@@ -73,7 +73,7 @@ export default {
     // Método Create
     async created() {
       try {
-        const res = await axios.get(`http://localhost:3000/professor_um`);
+        const res = await axios.get(`http://localhost:3000/quizes`);
           this.items = res.data;
       } catch (error) {
         console.log(error);
@@ -86,7 +86,7 @@ export default {
 
     // Método Remove
     removeItem(id) {
-      axios.delete(`http://localhost:3000/professor_um/${id}`)
+      axios.delete(`http://localhost:3000/quizes/${id}`)
       this.items = this.items.filter(item => item.id !== id)
       this.created()
     }

@@ -2,7 +2,7 @@
   <div class="student">
     <div class="form-floating">
       <textarea class="form-control" disabled id="floatingTextarea2" style="height: 100px"></textarea>
-      <label for="floatingTextarea">{{this.items.comando}}</label>
+      <label for="floatingTextarea">{{this.items.perguntas[0][0]}}</label>
     </div>
     <div class="d-flex flex-column">
       <div class="d-flex align-items-center justify-content-around mt-3">
@@ -49,7 +49,7 @@
         <button 
           type="button" 
           class="btn-lg btn-primary" 
-          @click="finalizarQuiz(items.id)"
+          @click="finalizarQuiz(this.items.id)"
         >
           Finalizar
         </button>
@@ -70,21 +70,33 @@ export default {
     const route = useRouter()
     const routes = useRoute()
 
+    let n_perguntas
+    
     return{
       item: [],
       items: {
         professor: "",
         disciplina: "",
         titulo: "",
-        comando: "",
-        resposta: "",
-        pergunta_n1: "",
-        pergunta_n2: "",
-        pergunta_n3: "",
-        pontuacao: "",
-        pontuacao_recebida: "",
-        peso: ""
+        perguntas: [
+          {},
+          {}
+        ]
       },
+      perguntas: [
+          {
+            comando: "",
+            resposta: "",
+            pergunta_n1: "",
+            pergunta_n2: "",
+            pergunta_n3: "",
+            pontuacao: "",
+            pontuacao_recebida: "",
+            peso: "",
+            id: ""
+          }
+      ],
+      n_perguntas,
       route,
       routes,
       escolha: ""
@@ -92,6 +104,7 @@ export default {
   },
 
   mounted(){
+    console.log(this.items.perguntas[0])
     this.receberQuiz(this.routes.params.id)
   },
 
@@ -99,8 +112,12 @@ export default {
     // Receber os valores referentes aos quizes
     async receberQuiz(id) {
         try {
-          const data = await axios.patch(`${`http://localhost:3000/professor_um`}/${id}`,{});
+          const data = await axios.patch(`${`http://localhost:3000/quizes`}/${id}`,{});
           this.items = data.data
+          this.perguntas = data.data.perguntas
+          this.n_perguntas = data.data.perguntas.lentgh()
+          console.log(n_perguntas)
+          console.log(this.items)
         }catch (error) {
           console.error(error);
         }
@@ -150,7 +167,7 @@ export default {
         // Salvar
     async salvarQuiz() {
       try {
-        const data = await axios.put(`${`http://localhost:3000/professor_um`}/${this.routes.params.id}`, this.items)
+        const data = await axios.put(`${`http://localhost:3000/quizes`}/${this.routes.params.id}`, this.items)
         return data
       } catch (error) {
         console.error(error);
