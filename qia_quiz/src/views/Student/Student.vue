@@ -78,8 +78,8 @@ export default {
       }
     },
 
-    realizarQuiz(slug) {
-      this.router.push({name: 'Questions', params: {slug} })
+    realizarQuiz(id) {
+      this.router.push({name: 'Questions', params: {id} })
     },
   }
 };
