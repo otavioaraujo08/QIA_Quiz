@@ -1,0 +1,21 @@
+.student{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+    width: 80%;
+  }
+  
+  .student nav{
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .student h3{
+    margin-left: 10px;
+  }
+  
+  .student tbody, .student thead{
+    background: #fff;
+  }
