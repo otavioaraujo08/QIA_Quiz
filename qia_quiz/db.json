@@ -13,6 +13,33 @@
       "pergunta_n3": "Cavalo de Pnoena",
       "id": 1,
       "pontuacao_recebida": 0
+    },
+    {
+      "professor": "Ricardo",
+      "disciplina": "portugues",
+      "titulo": "Contexto geral",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Como se chama a proteína que ajuda no crescimento muscular ?",
+      "resposta": "Frango com batata doce",
+      "pergunta_n1": "Apenas batata doce",
+      "pergunta_n2": "Apenas frango",
+      "pergunta_n3": "N/A",
+      "id": 2,
+      "pontuacao_recebida": "2"
+    },
+    {
+      "professor": "Otávio",
+      "disciplina": "portugues",
+      "titulo": "Adivinhação",
+      "pontuacao": "2",
+      "peso": "3",
+      "comando": "Qual o nome do meu cachorro ?",
+      "resposta": "Thor",
+      "pergunta_n1": "Loki",
+      "pergunta_n2": "Odin",
+      "pergunta_n3": "Hela",
+      "id": 3
     }
   ],
   "matematica": [
@@ -29,6 +56,20 @@
       "pergunta_n3": "4",
       "id": 1,
       "pontuacao_recebida": "1"
+    },
+    {
+      "professor": "Josielysom",
+      "disciplina": "matematica",
+      "titulo": "Calculo de variáveis",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Multiplique: A * B \nSendo que A = 2 e B = 2",
+      "resposta": "4",
+      "pergunta_n1": "6",
+      "pergunta_n2": "2",
+      "pergunta_n3": "8",
+      "id": 2,
+      "pontuacao_recebida": 0
     }
   ]
 }
