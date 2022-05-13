@@ -4,10 +4,10 @@
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-book"></i>
-        <h3>Fazer Quiz</h3>
+        <h3>Quiz de Português</h3>
       </div>
       <div>
-        <h3>Aluno</h3>
+        <button type="button" class="btn btn-success"  @click="realizarQuiz()">Realizar Quiz</button>
       </div>
     </nav>
     <hr />
@@ -18,7 +18,7 @@
           <th scope="col">Título</th>
           <th scope="col">Professor</th>
           <th scope="col">Disciplina</th>
-          <th scope="col"></th>
+          <th scope="col">Pontuação</th>
         </tr>
       </thead>
       <tbody>
@@ -27,9 +27,7 @@
           <td>{{ item.titulo }}</td>
           <td>{{ item.professor }}</td>
           <td>{{ item.disciplina }}</td>
-          <td>
-            <button type="button" class="btn btn-success"  @click="realizarQuiz(item.id)">Fazer Quiz</button>
-          </td>
+          <td>{{ item.pontuacao }}</td>
         </tr>
       </tbody>
     </table>
@@ -78,8 +76,8 @@ export default {
       }
     },
 
-    realizarQuiz(id) {
-      this.router.push({name: 'QuestionsMatematica', params: {id} }) 
+    realizarQuiz() {
+      this.router.push({name: 'QuestionsMatematica'})
     },
   }
 };
