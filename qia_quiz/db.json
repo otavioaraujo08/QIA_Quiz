@@ -40,6 +40,19 @@
       "pergunta_n2": "Odin",
       "pergunta_n3": "Hela",
       "id": 3
+    },
+    {
+      "professor": "Mendes",
+      "disciplina": "portugues",
+      "titulo": "Batman é um personagem da ???",
+      "pontuacao": "3",
+      "peso": "2",
+      "comando": "A que empresa pertence os direitos autorais do batman ?",
+      "resposta": "DC",
+      "pergunta_n1": "Microsoft",
+      "pergunta_n2": "Marvel",
+      "pergunta_n3": "Sony",
+      "id": 4
     }
   ],
   "matematica": [
@@ -70,6 +83,19 @@
       "pergunta_n3": "8",
       "id": 2,
       "pontuacao_recebida": 0
+    },
+    {
+      "professor": "Menendes",
+      "disciplina": "matematica",
+      "titulo": "Comandos Simples",
+      "pontuacao": "2",
+      "peso": "1",
+      "comando": "Quem tem prioridade durante uma operação matemática",
+      "resposta": "Multiplicação",
+      "pergunta_n1": "Adição",
+      "pergunta_n2": "Subtração",
+      "pergunta_n3": "Divisão",
+      "id": 3
     }
   ]
 }

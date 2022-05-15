@@ -66,8 +66,9 @@
 
       <div class="d-flex justify-content-between mt-3">
         <div>
-          <button type="button" class="btn btn-primary">+ Questão</button>
-          <button type="button" class="btn btn-danger">Excluír Questão</button>
+          <router-link to="/SetQuizPortugues">
+            <button type="button" class="btn btn-primary" @click="salvarQuiz()">Finalizar e criar mais questões</button>
+          </router-link>
         </div>
         <div>
           <router-link to="/ManageQuiz">
