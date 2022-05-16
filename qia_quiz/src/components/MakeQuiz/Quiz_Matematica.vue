@@ -4,7 +4,7 @@
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-book"></i>
-        <h3>Quiz de Português</h3>
+        <h3>Quiz de Matemática</h3>
       </div>
       <div>
         <button type="button" class="btn btn-success"  @click="realizarQuiz()">Realizar Quiz</button>
