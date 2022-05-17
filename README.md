@@ -59,7 +59,7 @@ $ npm run electron:serve
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C5603AQHp5b2Gj1qBFw/profile-displayphoto-shrink_800_800/0/1644192733798?e=1655942400&v=beta&t=eDLrqif8a16ImaaRCoE0at5ptZcWGigfVtO4TNVtPtk" width="100px;" alt=""/>
  <br />
  <sub><b>Marcelo Saldanha</b></sub></a> <a href="https://media-exp1.licdn.com/dms/image/C4E03AQHRFhGoirWrrg/profile-displayphoto-shrink_800_800/0/1622035729213?e=1655942400&v=beta&t=kF_NFi5NF_Au2R--5Jjdi6f3xqfvzndlm9WxXvKJk5c" title="marcos"></a></td>
-    <td align="center"><a href="https://github.com/MarcosAP20">
+    <td align="center"><a href="https://github.com/marcos-parente">
  <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQHRFhGoirWrrg/profile-displayphoto-shrink_800_800/0/1622035729213?e=1655942400&v=beta&t=kF_NFi5NF_Au2R--5Jjdi6f3xqfvzndlm9WxXvKJk5c" width="100px;" alt=""/>
  <br />
  <sub><b>Marcos Aguiar</b></sub></a> <a href="https://avatars.githubusercontent.com/u/62251064?s=400&u=b1c8da11d91445ccb2d97b709ccbcd0524885d98&v=4" title="Marcelo"></a></td>
