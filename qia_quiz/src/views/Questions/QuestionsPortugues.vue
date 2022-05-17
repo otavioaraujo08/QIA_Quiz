@@ -13,7 +13,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-primary"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; select(id);}"
                 >
                   {{item.resposta}}
                 </button> 
@@ -22,7 +22,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-success"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; select(id); status= false;}"
                 >
                   {{item.pergunta_n1}}
                 </button>
@@ -33,7 +33,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-danger"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; select(id); status= false;}"
                 >
                   {{item.pergunta_n2}}
                 </button>
@@ -42,7 +42,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-warning"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; select(id); status= false;}"
                   >
                    {{item.pergunta_n3}}
                 </button>
@@ -52,7 +52,7 @@
               <button 
                 type="button" 
                 class="btn-lg btn-dark" 
-                @click="()=> {indice += 1; status = false}"
+                @click="()=> {indice += 1; status = false; compararResposta()}"
               >
                 Próxima Questão
               </button>
@@ -70,7 +70,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-primary"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; select(id);}"
                 >
                   {{item.resposta}}
                 </button> 
@@ -79,7 +79,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-success"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; select(id); status= false;}"
                 >
                   {{item.pergunta_n1}}
                 </button>
@@ -90,7 +90,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-danger"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; select(id); status= false;}"
                 >
                   {{item.pergunta_n2}}
                 </button>
@@ -99,7 +99,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-warning"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; select(id); status= false;}"
                   >
                    {{item.pergunta_n3}}
                 </button>
@@ -109,14 +109,14 @@
               <button 
                 type="button" 
                 class="btn-lg btn-secondary" 
-                @click="()=> {indice -= 1; status = false}"
+                @click="()=> {id = 0; select(id); compararResposta(); indice -= 1; status = false; }"
               >
                 Questão Anterior
               </button>
               <button 
                 type="button" 
                 class="btn-lg btn-dark" 
-                @click="()=> {indice += 1; status = false}"
+                @click="()=> {indice += 1; status = false; compararResposta()}"
               >
                 Próxima Questão
               </button>
@@ -134,7 +134,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-primary"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; select(id);}"
                 >
                   {{item.resposta}}
                 </button> 
@@ -143,7 +143,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-success"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; select(id); status= false;}"
                 >
                   {{item.pergunta_n1}}
                 </button>
@@ -154,7 +154,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-danger"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; select(id); status= false;}"
                 >
                   {{item.pergunta_n2}}
                 </button>
@@ -163,7 +163,7 @@
                 <button 
                   type="button" 
                   class="btn-lg btn-warning"
-                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; status= false; compararResposta(id, pontuacao);}"
+                  @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; select(id); status= false;}"
                   >
                    {{item.pergunta_n3}}
                 </button>
@@ -173,14 +173,14 @@
               <button 
                 type="button" 
                 class="btn-lg btn-secondary" 
-                @click="()=> {indice -= 1; status = false}"
+                @click="()=> {id = 0; select(id); compararResposta(); indice -= 1; status = false; }"
               >
                 Questão Anterior
               </button>
               <button 
                 type="button" 
                 class="btn-lg btn-dark" 
-                @click="finalizarQuiz()"
+                @click="compararResposta();finalizarQuiz()"
               >
                 Finalizar
               </button>
@@ -198,14 +198,14 @@
 <script>
 import axios from "axios";
 import { useRoute }  from 'vue-router'
-import ScorePortugues           from "@/views/Score/ScorePortugues.vue" 
+import ScorePortugues from "@/views/Score/ScorePortugues.vue"; 
 
 export default {
   name: "QuestionsPortugues",
 
   components: {
-    ScorePortugues
-  },
+    ScorePortugues,
+},
 
   data(){
     const routes = useRoute()
@@ -213,6 +213,9 @@ export default {
     let indice = 0
     let finalizado = false
     let status = false
+    let selecionado = 0;
+    let pontuacao_acumulada = 0;
+    let pontuacao_anterior = 0;
 
     return{
       item: [],
@@ -242,7 +245,10 @@ export default {
       finalizado,
       status,
       routes,
-      escolha: 0,
+      escolha: 0, //Na logica nao esta sendo utilizado atualmente
+      pontuacao_acumulada,
+      pontuacao_anterior,
+      selecionado
     }
   },
 
@@ -271,42 +277,57 @@ export default {
       }
     },
 
-    compararResposta(id, pontuacao) {
-      if(id === 1){
-        if(this.status === false) {
-          this.escolha += pontuacao
+    select(id){
+      this.selecionado = id;
+      console.log(this.selecionado);
+    },
 
-          this.status = true
-        }
+    compararResposta() {
+      console.log(`Comparando Respostas:`)
+      console.log(`Selecionado: ${this.selecionado}`)
+      if(this.selecionado === 1){
+        this.pontuacao_acumulada += parseInt(this.pontuacao);
+        this.pontuacao_anterior = parseInt(this.pontuacao);
 
-        console.log(this.escolha)
-        console.log(this.status)
-      } else if (id === 2){
-        if(this.status === false && pontuacao - this.escolha <= 0) {
-          this.escolha -= pontuacao
-
-          this.status = true
-        }
-
-        console.log(this.escolha)
-
-      } else if (id === 3){
-        if(this.status === false && pontuacao - this.escolha <= 0) {
-          this.escolha -= pontuacao
-
-          this.status = true
-        }
-        console.log(this.escolha)
-
-      } else {
-        if(this.status === false && pontuacao - this.escolha <= 0) {
-          this.escolha -= pontuacao
-
-          this.status = true
-        }
-        console.log(this.escolha)
-
+        console.log(`Pontuação acumulada: ${this.pontuacao_acumulada}`);
       }
+      console.log(this.pontuacao_acumulada)
+      console.log(this.pontuacao_anterior)
+      if (this.selecionado === 0) {
+        this.pontuacao_acumulada = (this.pontuacao_acumulada - this.pontuacao_anterior) <= 0 ? 0 : this.pontuacao_acumulada - this.pontuacao_anterior;
+      }
+      console.log(`Pontuação acumulada: ${this.pontuacao_acumulada}`);
+      return 
+      
+      //  else if (id === 2){
+      //   if(this.status === false && pontuacao - this.escolha <= 0) {
+      //     this.escolha -= pontuacao
+
+      //     this.status = true
+      //   }
+
+      //   console.log(`Pontuação: ${this.pontuacao}`)
+      //   console.log(this.escolha)
+      //   console.log(this.status)
+
+      // } else if (id === 3){
+      //   if(this.status === false && pontuacao - this.escolha <= 0) {
+      //     this.escolha -= pontuacao
+
+      //     this.status = true
+      //   }
+      //   console.log(`Pontuação: ${this.pontuacao}`)
+      //   console.log(this.escolha)
+
+      // } else {
+      //   if(this.status === false && pontuacao - this.escolha <= 0) {
+      //     this.escolha -= pontuacao
+
+      //     this.status = true
+      //   }
+      //   console.log(`Pontuação: ${this.pontuacao}`)
+      //   console.log(this.escolha)
+      // }
     },
 
     finalizarQuiz(){
