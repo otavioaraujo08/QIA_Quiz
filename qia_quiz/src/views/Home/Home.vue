@@ -8,9 +8,7 @@
 </template>
 
 <script>
-
-import Logo from "../../components/Logo/Logo.vue"
-import "./Styles.css"
+import Logo from "@/components/Logo/Logo.vue" 
 
 export default {
   components: {
@@ -19,3 +17,14 @@ export default {
   name: 'HomeView',
 }
 </script>
+
+<style>
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+}
+</style>
