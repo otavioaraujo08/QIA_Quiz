@@ -1,6 +1,5 @@
 <template>
   <div class="student">
-    <back-button :route="'/Login'" />
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-book"></i>
@@ -36,16 +35,11 @@
 
 <script>
 import axios          from "axios";
-import BackButton     from "../../components/BackButton/BackButton.vue";
 import { useRouter }  from 'vue-router'
 import "./styles.css";
 
 export default {
   name: "ManageQuizView",
-
-  components: {
-    BackButton,
-  },
 
   setup(){
     const router = useRouter()

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height: 100vh;">
     <Quiz_Portugues/>
     <Quiz_Matematica/>
   </div>
@@ -55,3 +55,5 @@ export default {
   }
 };
 </script>
+<style>
+</style>

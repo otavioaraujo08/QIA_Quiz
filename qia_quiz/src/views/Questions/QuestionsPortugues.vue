@@ -1,5 +1,5 @@
 <template>
-  <div class="student">
+  <div class="student" style="height: 100vh;">
     <div v-if="finalizado == false">
       <div v-for="(item, index) of items" :key="item.id">
         <div v-if="indice == index && indice != items.length - 1 && indice == 0">
@@ -51,7 +51,7 @@
             <div>
               <button 
                 type="button" 
-                class="btn-lg btn-primary" 
+                class="btn-lg btn-dark" 
                 @click="()=> {indice += 1; status = false}"
               >
                 Próxima Questão
@@ -105,17 +105,17 @@
                 </button>
               </div>
             </div>
-            <div>
+            <div class="d-flex justify-content-around align-items-center mt-5">
               <button 
                 type="button" 
-                class="btn-lg btn-primary" 
+                class="btn-lg btn-secondary" 
                 @click="()=> {indice -= 1; status = false}"
               >
                 Questão Anterior
               </button>
               <button 
                 type="button" 
-                class="btn-lg btn-primary" 
+                class="btn-lg btn-dark" 
                 @click="()=> {indice += 1; status = false}"
               >
                 Próxima Questão
@@ -169,17 +169,17 @@
                 </button>
               </div>
             </div>
-            <div>
+            <div class="d-flex justify-content-around align-items-center mt-5">
               <button 
                 type="button" 
-                class="btn-lg btn-primary" 
+                class="btn-lg btn-secondary" 
                 @click="()=> {indice -= 1; status = false}"
               >
                 Questão Anterior
               </button>
               <button 
                 type="button" 
-                class="btn-lg btn-primary" 
+                class="btn-lg btn-dark" 
                 @click="finalizarQuiz()"
               >
                 Finalizar
@@ -196,7 +196,7 @@
 </template>
 
 <script>
-import axios                    from "axios";
+import axios from "axios";
 import { useRoute }  from 'vue-router'
 import ScorePortugues           from "@/views/Score/ScorePortugues.vue" 
 
