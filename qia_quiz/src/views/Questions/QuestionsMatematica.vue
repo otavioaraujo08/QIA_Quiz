@@ -202,7 +202,7 @@
       </div>
     </div>
     <div v-else-if="finalizado === true">
-      <ScoreMatematica :pontuacao="this.pontuacao_acumulada" />
+      <ScoreMatematica :pontuacao="this.pontuacao_final" />
     </div>
   </div>
 </template>
@@ -226,8 +226,8 @@ export default {
     let finalizado = false
     let status = false
     let selecionado = 0;
-    let pontuacao_acumulada = 0;
-    let pontuacao_anterior = 0;
+    let pontuacao_acumulada = [];
+    let pontuacao_final = 0;
 
     return{
       item: [],
@@ -259,7 +259,7 @@ export default {
       routes,
       escolha: 0, //Na logica nao esta sendo utilizado atualmente
       pontuacao_acumulada,
-      pontuacao_anterior,
+      pontuacao_final,
       selecionado
     }
   },
@@ -298,51 +298,24 @@ export default {
       console.log(`Comparando Respostas:`)
       console.log(`Selecionado: ${this.selecionado}`)
       if(this.selecionado === 1){
-        this.pontuacao_acumulada += parseInt(this.pontuacao);
-        this.pontuacao_anterior = parseInt(this.pontuacao);
+        this.pontuacao_acumulada.push(parseInt(this.pontuacao))
 
-        console.log(`Pontuação acumulada: ${this.pontuacao_acumulada}`);
+        console.log(`Pontuação acumulada: ${this.pontuacao_final}`);
+      }if (this.selecionado != 1 && this.selecionado != 0){
+        this.pontuacao_acumulada.push(0)
       }
-      console.log(this.pontuacao_acumulada)
-      console.log(this.pontuacao_anterior)
       if (this.selecionado === 0) {
-        this.pontuacao_acumulada = (this.pontuacao_acumulada - this.pontuacao_anterior) <= 0 ? 0 : this.pontuacao_acumulada - this.pontuacao_anterior;
+        this.pontuacao_acumulada.pop();
       }
-      console.log(`Pontuação acumulada: ${this.pontuacao_acumulada}`);
+      this.selecionado = 5;
+      console.log(this.pontuacao_acumulada);
       return 
-      
-      //  else if (id === 2){
-      //   if(this.status === false && pontuacao - this.escolha <= 0) {
-      //     this.escolha -= pontuacao
-
-      //     this.status = true
-      //   }
-
-      //   console.log(`Pontuação: ${this.pontuacao}`)
-      //   console.log(this.escolha)
-      //   console.log(this.status)
-
-      // } else if (id === 3){
-      //   if(this.status === false && pontuacao - this.escolha <= 0) {
-      //     this.escolha -= pontuacao
-
-      //     this.status = true
-      //   }
-      //   console.log(`Pontuação: ${this.pontuacao}`)
-      //   console.log(this.escolha)
-
-      // } else {
-      //   if(this.status === false && pontuacao - this.escolha <= 0) {
-      //     this.escolha -= pontuacao
-
-      //     this.status = true
-      //   }
-      //   console.log(`Pontuação: ${this.pontuacao}`)
-      //   console.log(this.escolha)
-      // }
     },
 
     finalizarQuiz(){
+      this.pontuacao_acumulada.forEach((ponto) => {
+        this.pontuacao_final = this.pontuacao_final + parseInt(ponto);
+      })
       this.finalizado = true
       this.indice = 10
     }
