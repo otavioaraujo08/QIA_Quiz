@@ -2,25 +2,27 @@
   <div class="student" style="height: 100vh;">
     <div v-if="finalizado == false">
       <div v-for="(item, index) of items" :key="item.id">
-        <div v-if="indice == index && indice != items.length - 1 && indice == 0">
+        <div v-if="indice == index && indice != items.length - 1 && indice == 0" class="mt-5">
           <div class="form-floating">
             <textarea class="form-control" disabled id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea">{{item.comando}}</label>
+            <label style="font-size: 32px;" for="floatingTextarea">{{item.comando}}</label>
           </div>
           <div id="botoes" class="d-flex flex-column">
-            <div class="d-flex align-items-center justify-content-around mt-3">
+            <div class="mt-3">
               <div id="resposta">
                 <button 
                   type="button" 
                   class="btn-lg btn-primary"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; select(id);}"
                 >
                   {{item.resposta}}
                 </button> 
               </div>
-              <div id="pergunta_um">
+              <div id="pergunta_um" class="mt-3">
                 <button 
                   type="button" 
+                  style="width: 100%;"
                   class="btn-lg btn-success"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; select(id); status= false;}"
                 >
@@ -28,11 +30,12 @@
                 </button>
               </div>
             </div>
-            <div class="d-flex align-items-center justify-content-around mt-3">
+            <div class="mt-3">
               <div id="pergunta_dois">
                 <button 
                   type="button" 
                   class="btn-lg btn-danger"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; select(id); status= false;}"
                 >
                   {{item.pergunta_n2}}
@@ -41,7 +44,8 @@
               <div id="pergunta_tres">
                 <button 
                   type="button" 
-                  class="btn-lg btn-warning"
+                  class="btn-lg btn-warning mt-3"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; select(id); status= false;}"
                   >
                    {{item.pergunta_n3}}
@@ -49,9 +53,9 @@
               </div>
             </div>
             <div>
-              <button 
+              <button
                 type="button" 
-                class="btn-lg btn-dark" 
+                class="btn-lg btn-dark mt-3"
                 @click="()=> {indice += 1; status = false; compararResposta()}"
               >
                 Próxima Questão
@@ -59,53 +63,57 @@
             </div>
           </div>
         </div>
-        <div v-if="indice == index && indice != items.length - 1 && indice != 0">
+        <div v-if="indice == index && indice != items.length - 1 && indice != 0" class="mt-5">
           <div class="form-floating">
             <textarea class="form-control" disabled id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea">{{item.comando}}</label>
+            <label style="font-size: 32px;" for="floatingTextarea">{{item.comando}}</label>
           </div>
           <div id="botoes" class="d-flex flex-column">
-            <div class="d-flex align-items-center justify-content-around mt-3">
+            <div class="mt-3">
               <div id="resposta">
                 <button 
                   type="button" 
                   class="btn-lg btn-primary"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; select(id);}"
                 >
                   {{item.resposta}}
                 </button> 
               </div>
-              <div id="pergunta_um">
+              <div id="pergunta_um" class="mt-3">
                 <button 
                   type="button" 
                   class="btn-lg btn-success"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; select(id); status= false;}"
                 >
                   {{item.pergunta_n1}}
                 </button>
               </div>
             </div>
-            <div class="d-flex align-items-center justify-content-around mt-3">
+            <div class="mt-3">
               <div id="pergunta_dois">
                 <button 
                   type="button" 
                   class="btn-lg btn-danger"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; select(id); status= false;}"
                 >
                   {{item.pergunta_n2}}
                 </button>
               </div>
-              <div id="pergunta_tres">
+              <div id="pergunta_tres" class="mt-3">
                 <button 
                   type="button" 
                   class="btn-lg btn-warning"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; select(id); status= false;}"
                   >
                    {{item.pergunta_n3}}
                 </button>
               </div>
             </div>
-            <div class="d-flex justify-content-around align-items-center mt-5">
+            <div class="d-flex justify-content-around align-items-center mt-3">
               <button 
                 type="button" 
                 class="btn-lg btn-secondary" 
@@ -123,53 +131,57 @@
             </div>
           </div>
         </div>
-        <div v-else-if="index == items.length -1 && indice == items.length - 1">
+        <div v-else-if="index == items.length -1 && indice == items.length - 1" class="mt-5">
           <div class="form-floating">
             <textarea class="form-control" disabled id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea">{{item.comando}}</label>
+            <label style="font-size: 32px;" for="floatingTextarea">{{item.comando}}</label>
           </div>
           <div id="botoes" class="d-flex flex-column">
-            <div class="d-flex align-items-center justify-content-around mt-3">
+            <div class="mt-3">
               <div id="resposta">
                 <button 
                   type="button" 
                   class="btn-lg btn-primary"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 1; select(id);}"
                 >
                   {{item.resposta}}
                 </button> 
               </div>
-              <div id="pergunta_um">
+              <div id="pergunta_um" class="mt-3">
                 <button 
                   type="button" 
                   class="btn-lg btn-success"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 2; select(id); status= false;}"
                 >
                   {{item.pergunta_n1}}
                 </button>
               </div>
             </div>
-            <div class="d-flex align-items-center justify-content-around mt-3">
+            <div class="mt-3">
               <div id="pergunta_dois">
                 <button 
                   type="button" 
                   class="btn-lg btn-danger"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 3; select(id); status= false;}"
                 >
                   {{item.pergunta_n2}}
                 </button>
               </div>
-              <div id="pergunta_tres">
+              <div id="pergunta_tres" class="mt-3">
                 <button 
                   type="button" 
                   class="btn-lg btn-warning"
+                  style="width: 100%;"
                   @click="()=> {pontuacao = parseInt(item.pontuacao); id = 4; select(id); status= false;}"
                   >
                    {{item.pergunta_n3}}
                 </button>
               </div>
             </div>
-            <div class="d-flex justify-content-around align-items-center mt-5">
+            <div class="d-flex justify-content-around align-items-center mt-3">
               <button 
                 type="button" 
                 class="btn-lg btn-secondary" 

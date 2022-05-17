@@ -14,19 +14,15 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">ID</th>
           <th scope="col">Título</th>
           <th scope="col">Professor</th>
-          <th scope="col">Disciplina</th>
           <th scope="col">Pontuação</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="item of items" :key="item.id">
-          <th scope="row">{{ item.id }}</th>
           <td>{{ item.titulo }}</td>
           <td>{{ item.professor }}</td>
-          <td>{{ item.disciplina }}</td>
           <td>{{ item.pontuacao }}</td>
         </tr>
       </tbody>
