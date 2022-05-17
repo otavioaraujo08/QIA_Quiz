@@ -1,6 +1,7 @@
 <template>
   <div class="score">
     <div>
+      <img :src="img" alt="titulo" class="mb-3">
       <h3>
         {{ avaliacao }}
         <br>
@@ -32,12 +33,14 @@ export default {
     let n_questoes = 0;
     let porc_acerto;
     let avaliacao;
+    let img;
     
     const results = {
       pontuacao_max,
       n_questoes,
       porc_acerto,
-      avaliacao
+      avaliacao,
+      img
     }
 
     return results;
@@ -62,15 +65,19 @@ export default {
 
         if ( this.porc_acerto <= 50 ) {
           this.avaliacao = "Você precisa melhorar."
+          this.img = require('../../assets/sad.png')
         } 
         if ( this.porc_acerto > 50 && this.porc_acerto < 70 ) {
-          this.avaliacao = "Você não foi tão bem."
+          this.avaliacao = "Você foi regular, continue estudando"
+          this.img = require('../../assets/warning.png')
         }
         if ( this.porc_acerto >= 70 && this.porc_acerto < 90 ) {
-          this.avaliacao = "Muito bem!"
+          this.avaliacao = "Quase lá, você foi bem"
+          this.img = require('../../assets/happy.png')
         }
         if ( this.porc_acerto >= 90 && this.porc_acerto <=100 ) {
-          this.avaliacao = "Excelente!"
+          this.avaliacao = "Parabéns você acertou todas as questões!"
+          this.img = require('../../assets/welldone.png')
         }
         
 
