@@ -24,6 +24,7 @@ O projeto tem como contexto atender a escola E M E I F Prefeito Laurival Cunha  
 
 ## 💻 Tecnologias utilizadas
  - Frontend: <a href="https://vuejs.org/">Vuejs</a>
+ - Backend: <a href="https://www.npmjs.com/package/json-server">Json server</a>
  - <a href="https://www.electronjs.org/">ElectronJs </a>
 
 ## 📁 Clonando o Repositório
@@ -37,6 +38,9 @@ $ cd qia_quiz
 
 # Instalando as dependências 💡
 $ npm i
+
+# Executar o banco de dados
+$ json-server --watch db.json
 
 # Execute a aplicação em modo de desenvolvimento 🔓
 $ npm run electron:serve
