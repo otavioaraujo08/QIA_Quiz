@@ -7,7 +7,6 @@
         Pontuação: <span style="color: yellow">{{ pontuacao }}</span> de <span style="color: yellowgreen">{{ pontuacao_max }}</span>.
         <br>
         Porcentagem de acertos: {{ this.porc_acerto }}%
-        <!-- Parabéns, do total de {{ this.pontuacao_max }} você ficou com <strong>{{ pontuacao }}</strong> pontos!! -->
       </h3>
     </div>
     <div>
@@ -23,7 +22,6 @@ import axios          from "axios";
 import "./styles.css";
 export default {
   name: "ScorePortugues",
-
 
   props: {
     pontuacao: Number 
@@ -55,14 +53,12 @@ export default {
       try {
         const res = await axios.get(`http://localhost:3000/portugues`);
         const { pontuacao } = this.$props
-          //this.pontosPortugues = res.data;
         this.n_questoes = res.data.length;
         res.data.forEach(questao => {
           return this.pontuacao_max += parseInt(questao.pontuacao);
         });
         
         this.porc_acerto = parseInt(pontuacao*100/this.pontuacao_max)
-        console.log(`n questoes: ${this.n_questoes}, \npontuação: ${pontuacao}, \nporcentagem: ${this.porc_acerto}\npontuação máxima: ${this.pontuacao_max}`)
 
         if ( this.porc_acerto <= 50 ) {
           this.avaliacao = "Você precisa melhorar."
