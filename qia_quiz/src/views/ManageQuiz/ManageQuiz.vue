@@ -7,6 +7,7 @@
     <QuizPortugues />
     <QuizMatematica />
     <QuizCiencias />
+    <QuizHistoria />
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 import QuizPortugues        from '@/components/ManagerQuiz/Quiz_Portugues'
 import QuizMatematica       from '@/components/ManagerQuiz/Quiz_Matematica'
 import QuizCiencias         from '@/components/ManagerQuiz/Quiz_Ciencias'
+import QuizHistoria         from '@/components/ManagerQuiz/Quiz_Historia'
 import BackButton           from "@/components/BackButton/BackButton.vue";
 import "./styles.css";
 
@@ -24,7 +26,8 @@ export default {
     BackButton,
     QuizPortugues,
     QuizMatematica,
-    QuizCiencias
+    QuizCiencias,
+    QuizHistoria
   },
 };
 </script>

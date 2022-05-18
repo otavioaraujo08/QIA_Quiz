@@ -140,7 +140,35 @@
       "id": 2
     }
   ],
-  "historia": [],
+  "historia": [
+    {
+      "professor": "Dom Pedro",
+      "disciplina": "portugues",
+      "titulo": "História do brasilll",
+      "comando": "Quem foi Dom Pedro II",
+      "resposta": "Um monarco do imperio brasileiro",
+      "pergunta_n1": "Um autor de mangas japonês",
+      "pergunta_n2": "Um cantor mexicano",
+      "pergunta_n3": "Um esportista americano",
+      "id": 1,
+      "materia": "1",
+      "pontuacao": "1",
+      "peso": "1"
+    },
+    {
+      "professor": "Yoshi",
+      "disciplina": "historia",
+      "titulo": "Curiosidade histórica",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Qual o nome do dinossauro do Mario ?",
+      "resposta": "Yoshi",
+      "pergunta_n1": "Wario",
+      "pergunta_n2": "Browser",
+      "pergunta_n3": "Peach",
+      "id": 2
+    }
+  ],
   "geografia": [],
   "ingles": []
 }

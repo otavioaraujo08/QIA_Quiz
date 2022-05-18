@@ -8,10 +8,12 @@ import ManageQuiz           from '../views/ManageQuiz/ManageQuiz.vue'
 import Student              from '../views/Student/Student.vue'
 import SetQuizPortugues     from '../views/SetQuiz/SetQuizPortugues.vue'
 import SetQuizMatematica    from '../views/SetQuiz/SetQuizMatematica.vue'
-import SetQuizCiencia    from '../views/SetQuiz/SetQuizCiencia.vue'
+import SetQuizCiencia       from '../views/SetQuiz/SetQuizCiencia.vue'
+import SetQuizHistoria      from '../views/SetQuiz/SetQuizHistoria.vue'
 import QuestionsPortugues   from '../views/Questions/QuestionsPortugues.vue'
 import QuestionsMatematica  from '../views/Questions/QuestionsMatematica.vue'
-import QuestionsCiencia  from '../views/Questions/QuestionsCiencia.vue'
+import QuestionsCiencia     from '../views/Questions/QuestionsCiencia.vue'
+import QuestionsHistoria     from '../views/Questions/QuestionsHistoria.vue'
 import ScorePortugues       from '../views/Score/ScorePortugues.vue'
 import ScoreMatematica      from '../views/Score/ScoreMatematica.vue'
 
@@ -62,6 +64,11 @@ const routes = [
     component: SetQuizCiencia
   },
   {
+    path: '/SetQuizHistoria/:id?',
+    name: 'SetQuizHistoria',
+    component: SetQuizHistoria
+  },
+  {
     path: '/QuestionsPortugues/:id?',
     name: 'QuestionsPortugues',
     component: QuestionsPortugues
@@ -75,6 +82,11 @@ const routes = [
     path: '/QuestionsCiencia/:id?',
     name: 'QuestionsCiencia',
     component: QuestionsCiencia
+  },
+  {
+    path: '/QuestionsHistoria/:id?',
+    name: 'QuestionsHistoria',
+    component: QuestionsHistoria
   },
   {
     path: '/ScorePortugues/:id?', 

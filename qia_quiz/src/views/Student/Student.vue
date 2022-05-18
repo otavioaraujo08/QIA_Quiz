@@ -3,6 +3,7 @@
     <Quiz_Portugues/>
     <Quiz_Matematica/>
     <Quiz_Ciencia/>
+    <Quiz_Historia/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import axios          from "axios";
 import Quiz_Portugues from "@/components/MakeQuiz/Quiz_Portugues.vue";
 import Quiz_Matematica from "@/components/MakeQuiz/Quiz_Matematica.vue";
 import Quiz_Ciencia from "@/components/MakeQuiz/Quiz_Ciencias.vue";
+import Quiz_Historia from "@/components/MakeQuiz/Quiz_Historia.vue";
 import "./styles.css";
 
 export default {
@@ -20,7 +22,8 @@ export default {
   components: {
     Quiz_Portugues,
     Quiz_Matematica,
-    Quiz_Ciencia
+    Quiz_Ciencia,
+    Quiz_Historia
 },
 
   setup(){

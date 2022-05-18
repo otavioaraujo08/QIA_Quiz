@@ -24,7 +24,10 @@
       <select id="select_value" class="form-select" aria-label="Default select example">
         <option value="portugues">Português</option>
         <option value="matematica">Matemática</option>
-        <option value="ciencia">Ciência</option>
+        <option value="ciencias">Ciência</option>
+        <option value="historia">Historia</option>
+        <option value="geografia">Geografia</option>
+        <option value="ingles">Inglês</option>
     </select>
     </div>
 
@@ -157,8 +160,24 @@ export default {
         this.items.materia = "1" 
 
         this.items.disciplina = strUser
-      } else {
+      } else if(strUser === "matematica"){
         this.items.materia = "2"
+
+        this.items.disciplina = strUser
+      } else if(strUser === "ciencias"){
+        this.items.materia = "3"
+
+        this.items.disciplina = strUser
+      } else if(strUser === "historia"){
+        this.items.materia = "4"
+
+        this.items.disciplina = strUser
+      } else if(strUser === "geografia"){
+        this.items.materia = "5"
+
+        this.items.disciplina = strUser
+      } else{
+        this.items.materia = "6"
 
         this.items.disciplina = strUser
       }
@@ -203,8 +222,54 @@ export default {
           });
 
           this.items = [...this.items, res.data];
-        } else {
+        } else if(strUser === "ciencias"){
         const res = await axios.post(`http://localhost:3000/ciencias`, {
+            professor:    this.items.professor,
+            disciplina:   this.items.disciplina,
+            titulo:       this.items.titulo,
+            pontuacao:    this.items.pontuacao,
+            peso:         this.items.peso,
+            comando:      this.items.comando,
+            resposta:     this.items.resposta,
+            pergunta_n1:  this.items.pergunta_n1,
+            pergunta_n2:  this.items.pergunta_n2,
+            pergunta_n3:  this.items.pergunta_n3,
+          });
+
+          this.items = [...this.items, res.data];
+
+        } else if(strUser === "historia"){
+        const res = await axios.post(`http://localhost:3000/historia`, {
+            professor:    this.items.professor,
+            disciplina:   this.items.disciplina,
+            titulo:       this.items.titulo,
+            pontuacao:    this.items.pontuacao,
+            peso:         this.items.peso,
+            comando:      this.items.comando,
+            resposta:     this.items.resposta,
+            pergunta_n1:  this.items.pergunta_n1,
+            pergunta_n2:  this.items.pergunta_n2,
+            pergunta_n3:  this.items.pergunta_n3,
+          });
+
+          this.items = [...this.items, res.data];
+        } else if(strUser === "geografia"){
+          const res = await axios.post(`http://localhost:3000/geografia`, {
+            professor:    this.items.professor,
+            disciplina:   this.items.disciplina,
+            titulo:       this.items.titulo,
+            pontuacao:    this.items.pontuacao,
+            peso:         this.items.peso,
+            comando:      this.items.comando,
+            resposta:     this.items.resposta,
+            pergunta_n1:  this.items.pergunta_n1,
+            pergunta_n2:  this.items.pergunta_n2,
+            pergunta_n3:  this.items.pergunta_n3,
+          });
+
+          this.items = [...this.items, res.data];
+        } else {
+        const res = await axios.post(`http://localhost:3000/ingles`, {
             professor:    this.items.professor,
             disciplina:   this.items.disciplina,
             titulo:       this.items.titulo,
