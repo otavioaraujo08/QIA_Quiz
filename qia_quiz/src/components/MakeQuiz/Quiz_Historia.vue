@@ -9,7 +9,6 @@
         <button type="button" class="btn btn-success"  @click="realizarQuiz()">Realizar Quiz</button>
       </div>
     </nav>
-    <hr />
     <table class="table">
       <thead>
         <tr>
@@ -26,6 +25,7 @@
         </tr>
       </tbody>
     </table>
+    <hr />
   </div>
 </template>
 

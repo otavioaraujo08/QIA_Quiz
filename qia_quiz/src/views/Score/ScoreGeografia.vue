@@ -22,7 +22,7 @@
 import axios          from "axios";
 import "./styles.css";
 export default {
-  name: "ScoreCiencia",
+  name: "ScoreGeografia",
 
   props: {
     pontuacao: Number
@@ -54,7 +54,7 @@ export default {
     // Chamando todos os itens do DB
     async IAFeedback() {
       try {
-        const res = await axios.get(`http://localhost:3000/ciencias`);
+        const res = await axios.get(`http://localhost:3000/geografia`);
         const { pontuacao } = this.$props
         this.n_questoes = res.data.length;
         res.data.forEach(questao => {

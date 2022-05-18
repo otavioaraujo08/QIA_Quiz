@@ -24,7 +24,7 @@
       <select id="select_value" class="form-select" aria-label="Default select example">
         <option value="portugues">Português</option>
         <option value="matematica">Matemática</option>
-        <option value="ciencias">Ciência</option>
+        <option value="ciencias">Ciências</option>
         <option value="historia">Historia</option>
         <option value="geografia">Geografia</option>
         <option value="ingles">Inglês</option>
@@ -133,7 +133,7 @@ export default {
     // Receber os valores referentes aos quizes
     async receberQuiz() {
       try {
-        const res = await axios.get(`http://localhost:3000/ciencias`);
+        const res = await axios.get(`http://localhost:3000/ingles`);
 
         this.items = res.data;
       } catch (error) {
@@ -144,7 +144,7 @@ export default {
     // Receber os valores referentes aos quizes
     async editarQuiz(id) {
         try {
-          const data = await axios.patch(`${`http://localhost:3000/ciencias`}/${id}`,{});
+          const data = await axios.patch(`${`http://localhost:3000/ingles`}/${id}`,{});
 
           this.items = data.data
         }catch (error) {

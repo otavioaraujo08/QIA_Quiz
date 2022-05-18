@@ -3,7 +3,7 @@
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-gear"></i>
-        <h3>Quiz de Ciências </h3>
+        <h3>Quiz de Inglês </h3>
       </div>
       <div>
         <h3>Professor</h3>
@@ -40,7 +40,7 @@ import axios          from "axios";
 import { useRouter }  from 'vue-router'
 
 export default {
-  name: "Quiz_Ciencias",
+  name: "Quiz_Ingles",
 
   setup(){
     const router = useRouter()
@@ -64,7 +64,7 @@ export default {
     // Método Create
     async created() {
       try {
-        const res = await axios.get(`http://localhost:3000/ciencias`);
+        const res = await axios.get(`http://localhost:3000/ingles`);
           this.items = res.data;
       } catch (error) {
         console.log(error);
@@ -72,12 +72,12 @@ export default {
     },
 
     editarCampos(id) {
-      this.router.push({name: 'SetQuizCiencias', params: {id} })
+      this.router.push({name: 'SetQuizIngles', params: {id} })
     },
 
     // Método Remove
     removeItem(id) {
-      axios.delete(`http://localhost:3000/ciencias/${id}`)
+      axios.delete(`http://localhost:3000/ingles/${id}`)
       this.items = this.items.filter(item => item.id !== id)
       this.created()
     }

@@ -344,7 +344,7 @@
       </div>
     </div>
     <div v-else-if="finalizado === true">
-      <ScoreCiencia :pontuacao="this.pontuacao_final" />
+      <ScoreGeografia :pontuacao="this.pontuacao_final" />
     </div>
   </div>
 </template>
@@ -352,13 +352,13 @@
 <script>
 import axios from "axios";
 import { useRoute } from "vue-router";
-import ScoreCiencia from "@/views/Score/ScoreCiencia.vue";
+import ScoreGeografia from "@/views/Score/ScoreGeografia.vue";
 
 export default {
-  name: "QuestionsCiencia",
+  name: "QuestionsGeografia",
 
   components: {
-    ScoreCiencia,
+    ScoreGeografia,
   },
 
   data() {
@@ -423,7 +423,7 @@ export default {
     // Receber os valores referentes aos quizes
     async receberQuiz() {
       try {
-        const res = await axios.get(`http://localhost:3000/ciencias`);
+        const res = await axios.get(`http://localhost:3000/geografia`);
         this.items = res.data;
       } catch (error) {
         console.log(error);

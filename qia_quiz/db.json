@@ -169,6 +169,60 @@
       "id": 2
     }
   ],
-  "geografia": [],
-  "ingles": []
+  "geografia": [
+    {
+      "professor": "Marcos",
+      "disciplina": "geografia",
+      "titulo": "Brasil",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Qual a capital do BR?",
+      "resposta": "Brasília",
+      "pergunta_n1": "São Paulo",
+      "pergunta_n2": "Rio de Janeiro",
+      "pergunta_n3": "Minas Gerais",
+      "id": 1
+    },
+    {
+      "professor": "Marcos",
+      "disciplina": "geografia",
+      "titulo": "Brasil",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "A floresta amazônica abrange qual região do Brasil?",
+      "resposta": "Norte",
+      "pergunta_n1": "Nordeste",
+      "pergunta_n2": "Centro-Oeste",
+      "pergunta_n3": "Sul",
+      "id": 2
+    }
+  ],
+  "ingles": [
+    {
+      "professor": "Marcos",
+      "disciplina": "ingles",
+      "titulo": "To be",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Tobe",
+      "resposta": " To be",
+      "pergunta_n1": "te bo",
+      "pergunta_n2": "be to",
+      "pergunta_n3": "bo te",
+      "id": 1
+    },
+    {
+      "professor": "Marcos",
+      "disciplina": "ingles",
+      "titulo": "Be to",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Be to carreiro?\n",
+      "resposta": "be to",
+      "pergunta_n1": "To be",
+      "pergunta_n2": "CArreiro",
+      "pergunta_n3": "CarREEEIROOO",
+      "id": 2
+    }
+  ]
 }
