@@ -14,3 +14,8 @@
 .teacher button{
   border: none;
 }
+
+.teacher button:disabled{
+  pointer-events: all !important;
+  cursor: not-allowed;
+}

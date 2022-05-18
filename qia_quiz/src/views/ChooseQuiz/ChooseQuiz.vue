@@ -8,14 +8,14 @@
     <div class="mt-3">
       <router-link to="/SetQuizPortugues">
         <button type="button" class="btn btn-lg btn-success">
-          <i class="fa-solid fa-circle-plus"></i> Criar Quiz
+          <i class="fa-solid fa-circle-plus"></i> Criar Questão
         </button>
       </router-link>
     </div>
     <div class="mt-3">
       <router-link to="/ManageQuiz">
-        <button type="button" class="btn btn-lg btn-danger">
-          <i class="fa-solid fa-pen-to-square"></i> Gerenciar Quiz
+        <button type="button" class="btn btn-lg btn-primary">
+          <i class="fa-solid fa-pen-to-square"></i> Gerenciar Questão
         </button>
       </router-link>
     </div>

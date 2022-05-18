@@ -22,8 +22,8 @@
       <span class="input-group-text" id="basic-addon1">Disciplina</span>
       
       <select id="select_value" class="form-select" aria-label="Default select example">
-        <option value="portugues">Portugues</option>
-        <option value="matematica">Matematica</option>
+        <option value="portugues">Português</option>
+        <option value="matematica">Matemática</option>
     </select>
     </div>
 
@@ -39,40 +39,40 @@
 
     <div class="d-flex flex-column">
       <div class="d-flex align-items-center justify-content-around mt-3">
-        <div>
+        <div style="width: 40%;">
           <input v-model="items.resposta" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 1">
         </div>
-        <div>
+        <div style="width: 40%;">
           <input v-model="items.pergunta_n1" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 2">
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-around mt-3">
-        <div>
+        <div style="width: 40%;">
           <input v-model="items.pergunta_n2" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 3">
         </div>
         
-        <div>
+        <div style="width: 40%;">
           <input v-model="items.pergunta_n3" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alternativa 4">
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-around mt-3">
-        <div>
+        <div style="width: 40%;">
           <input v-model="items.pontuacao" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pontuação">
         </div>       
-        <div>
+        <div style="width: 40%;">
           <input v-model="items.peso" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Peso">
         </div>
       </div>
 
-      <div class="d-flex justify-content-between mt-3">
+      <div class="d-flex justify-content-evenly mt-3">
         <div>
           <router-link to="/SetQuizPortugues">
-            <button type="button" class="btn btn-primary" @click="salvarQuiz()">Finalizar e criar mais questões</button>
+            <button type="button" class="btn btn-primary btn-lg" @click="salvarQuiz()">Finalizar e criar mais questões</button>
           </router-link>
         </div>
         <div>
           <router-link to="/ManageQuiz">
-            <button type="button" class="btn btn-success" @click="salvarQuiz()">Finalizar</button>
+            <button type="button" class="btn btn-success btn-lg" @click="salvarQuiz()">Finalizar</button>
           </router-link>
         </div>
       </div>

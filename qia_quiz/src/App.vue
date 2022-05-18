@@ -8,7 +8,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #2c3e50;
+  background-image: linear-gradient(to bottom right, #CC2E5D, #FF5858);
 }
 
 #app h3 {

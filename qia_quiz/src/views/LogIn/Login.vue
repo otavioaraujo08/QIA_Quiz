@@ -3,7 +3,6 @@
     <body>
       <div class="page-wrap">
         <div class="left-panel">
-          <Carousel/>
         </div>
 
         <div class="right-panel">
@@ -13,8 +12,8 @@
           <div class="illustration">
             <logo />
           </div>
-          <form class="animated-form">
-            <h3>Login to your account</h3>
+          <form class="animated-form d-flex flex-column align-items-center">
+            <h3>Escolha uma opção</h3>
             <div class="form-group">
               <router-link to="/TeacherPassword">
                 <button type="button" class="btn btn-lg btn-success" style="width: 400px;">
@@ -38,7 +37,6 @@
 
 <script>
 import Logo from "@/components/Logo/Logo.vue";
-import Carousel from "@/components/Carousel/Carousel.vue";
 import BackButton from "@/components/BackButton/BackButton.vue";
 
 export default {
@@ -47,7 +45,6 @@ export default {
   components: {
     Logo,
     BackButton,
-    Carousel
   },
 };
 </script>

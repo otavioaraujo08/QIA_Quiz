@@ -23,7 +23,7 @@
     </div>
     <div class="mt-2 d-flex flex-column">
       <router-link to="/ChooseQuiz">
-        <button class="btn btn-lg btn-success" :disabled="!password.length">Fazer Login</button>
+        <button class="btn btn-lg btn-success" :disabled="password !== correctPassword">Fazer Login</button>
       </router-link>
     </div>
   </div>
@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       password: "",
-      correctPassword: "qiaquiz",
+      correctPassword: "123",
       passwordFieldType: "password",
     };
   },
