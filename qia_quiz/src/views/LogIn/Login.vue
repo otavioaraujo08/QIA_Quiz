@@ -3,12 +3,21 @@
     <body>
       <div class="page-wrap">
         <div class="left-panel">
+          <div class="informacao-quiz">
+            <h1>QiaQuiz</h1>
+            <p>Uma maneira divertida de aprender</p>
+            <p style="width: 70%; margin: 0 auto">
+              O projeto tem como contexto atender a escola E M E I F Prefeito
+              Laurival Cunha localizada na Ilha das Onças no munícipio de
+              Barcarena no estado do Pará, e tem como objetivo estimular o
+              interesse dos alunos ao estudo por meio do uso de tecnologia em
+              suas atividades escolares.
+            </p>
+          </div>
         </div>
 
         <div class="right-panel">
-          <back-button 
-            :route="'/'"
-          />
+          <back-button :route="'/'" />
           <div class="illustration">
             <logo />
           </div>
@@ -16,14 +25,22 @@
             <h3>Escolha uma opção</h3>
             <div class="form-group">
               <router-link to="/TeacherPassword">
-                <button type="button" class="btn btn-lg btn-success" style="width: 400px;">
+                <button
+                  type="button"
+                  class="btn btn-lg btn-success"
+                  style="width: 400px"
+                >
                   <i class="fa-solid fa-user-tie"></i> Entrar como professor
                 </button>
               </router-link>
             </div>
             <div class="form-group">
               <router-link to="/Student">
-                <button type="button" class="btn btn-lg btn-danger" style="width: 400px;">
+                <button
+                  type="button"
+                  class="btn btn-lg btn-danger"
+                  style="width: 400px"
+                >
                   <i class="fa-solid fa-chalkboard-user"></i> Entrar como aluno
                 </button>
               </router-link>
@@ -50,7 +67,7 @@ export default {
 </script>
 
 <style scoped>
-.login{
+.login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,18 +76,18 @@ export default {
   height: 100vh;
 }
 
-.login h3{
+.login h3 {
   color: #fff;
   margin-bottom: 50px;
 }
 
-.buttons{
+.buttons {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.buttons button{
+.buttons button {
   padding: 20px;
 }
 
@@ -97,7 +114,7 @@ body {
 
 .left-panel {
   flex: 1 1 66.666%;
-  background-image: linear-gradient(to bottom right, #CC2E5D, #FF5858);
+  background-image: linear-gradient(to bottom right, #cc2e5d, #ff5858);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,10 +126,24 @@ body {
 }
 
 .left-panel h2 {
-  color: #FFF;
+  color: #fff;
   font-size: 48px;
   font-weight: 400;
   text-align: center;
+}
+
+.informacao-quiz {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  width: 800px;
+  height: 400px;
+  border-radius: 16px;
+}
+
+.informacao-quiz p {
+  margin-bottom: 30px;
 }
 
 .right-panel {
@@ -121,14 +152,14 @@ body {
 }
 
 .right-panel h1 {
-  color: #FF5858;
+  color: #ff5858;
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 50px;
 }
 
 .right-panel h1 strong {
-  color: #CC2E5D;
+  color: #cc2e5d;
   font-weight: 900;
 }
 
@@ -154,7 +185,7 @@ body {
   top: 50%;
   left: 0px;
   transform: translateY(-50%);
-  color: #AAA;
+  color: #aaa;
   font-size: 20px;
   transition: 0.4s ease-out;
 }
@@ -166,7 +197,7 @@ body {
   border: none;
   outline: none;
   background: none;
-  border-bottom: 3px solid #AAA;
+  border-bottom: 3px solid #aaa;
 
   color: #666;
   font-size: 20px;
@@ -177,12 +208,12 @@ body {
 .animated-form .form-group.has-content label {
   top: 0px;
   transform: translateY(-100%);
-  color: #FF5858;
+  color: #ff5858;
 }
 
-.animated-form .form-group:focus-within input, 
+.animated-form .form-group:focus-within input,
 .animated-form .form-group.has-content input {
-  border-bottom-color: #FF5858;
+  border-bottom-color: #ff5858;
 }
 .animated-form .form-group.flex-end {
   margin-bottom: 25px;
@@ -191,25 +222,30 @@ body {
   display: inline-block;
   width: auto;
   padding: 15px 60px;
-  border: 3px solid #FF5858;
+  border: 3px solid #ff5858;
   border-radius: 999px;
-  background-image: linear-gradient(to right, transparent 50%, #CC2E5D 50%, #FF5858);
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    #cc2e5d 50%,
+    #ff5858
+  );
   background-size: 200%;
 
-  color: #FF5858;
+  color: #ff5858;
   font-size: 24px;
   font-weight: 500;
   cursor: pointer;
 }
 
 .animated-form .form-group .button:hover {
-  color: #FFF;
+  color: #fff;
   background-position: 100%;
-  border: 3px solid #FFF;
+  border: 3px solid #fff;
 }
 
 .animated-form .lost-password a {
-  color: #FF5858;
+  color: #ff5858;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
@@ -217,6 +253,6 @@ body {
   border-bottom: 2px solid transparent;
 }
 .animated-form .lost-password a:hover {
-  border-bottom-color: #FF5858;
+  border-bottom-color: #ff5858;
 }
 </style>
