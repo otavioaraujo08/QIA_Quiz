@@ -3,7 +3,7 @@
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-book"></i>
-        <h3>Quiz de Matemática</h3>
+        <h3>Quiz de Ciencias</h3>
       </div>
       <div>
         <button type="button" class="btn btn-success"  @click="realizarQuiz()">Realizar Quiz</button>
@@ -35,7 +35,7 @@ import { useRouter }  from 'vue-router'
 import "./styles.css";
 
 export default {
-  name: "Quiz_Matematica",
+  name: "Quiz_Ciencias",
 
   setup(){
     const router = useRouter()
@@ -59,7 +59,7 @@ export default {
     // Chamando todos os itens do DB
     async created() {
       try {
-        const res = await axios.get(`http://localhost:3000/matematica`);
+        const res = await axios.get(`http://localhost:3000/ciencias`);
           this.items = res.data;
       } catch (error) {
         console.log(error);
@@ -67,7 +67,7 @@ export default {
     },
 
     realizarQuiz() {
-      this.router.push({name: 'QuestionsMatematica'})
+      this.router.push({name: 'QuestionsCiencia'})
     },
   }
 };

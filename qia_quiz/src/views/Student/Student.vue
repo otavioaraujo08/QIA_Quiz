@@ -1,7 +1,8 @@
 <template>
-  <div style="height: 100vh;">
+  <div style="height: 100%;">
     <Quiz_Portugues/>
     <Quiz_Matematica/>
+    <Quiz_Ciencia/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@ import { useRouter }  from 'vue-router'
 import axios          from "axios";
 import Quiz_Portugues from "@/components/MakeQuiz/Quiz_Portugues.vue";
 import Quiz_Matematica from "@/components/MakeQuiz/Quiz_Matematica.vue";
+import Quiz_Ciencia from "@/components/MakeQuiz/Quiz_Ciencias.vue";
 import "./styles.css";
 
 export default {
@@ -17,7 +19,8 @@ export default {
 
   components: {
     Quiz_Portugues,
-    Quiz_Matematica
+    Quiz_Matematica,
+    Quiz_Ciencia
 },
 
   setup(){

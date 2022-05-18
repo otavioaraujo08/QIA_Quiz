@@ -37,7 +37,7 @@ import { useRouter }  from 'vue-router'
 import "./styles.css";
 
 export default {
-  name: "ManageQuizView",
+  name: "Quiz_Portugues",
 
   components: {
     BackButton,

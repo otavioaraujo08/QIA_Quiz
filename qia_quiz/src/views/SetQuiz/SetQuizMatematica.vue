@@ -24,6 +24,7 @@
       <select id="select_value" class="form-select" aria-label="Default select example">
         <option value="portugues">Português</option>
         <option value="matematica">Matemática</option>
+        <option value="ciencia">Ciência</option>
     </select>
     </div>
 
@@ -188,8 +189,23 @@ export default {
           });
 
           this.items = [...this.items, res.data];
-        } else {
+        } else if(strUser === "matematica"){
           const res = await axios.post(`http://localhost:3000/matematica`, {
+            professor:    this.items.professor,
+            disciplina:   this.items.disciplina,
+            titulo:       this.items.titulo,
+            pontuacao:    this.items.pontuacao,
+            peso:         this.items.peso,
+            comando:      this.items.comando,
+            resposta:     this.items.resposta,
+            pergunta_n1:  this.items.pergunta_n1,
+            pergunta_n2:  this.items.pergunta_n2,
+            pergunta_n3:  this.items.pergunta_n3,
+          });
+
+          this.items = [...this.items, res.data];
+        } else {
+        const res = await axios.post(`http://localhost:3000/ciencias`, {
             professor:    this.items.professor,
             disciplina:   this.items.disciplina,
             titulo:       this.items.titulo,

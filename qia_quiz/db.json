@@ -112,11 +112,35 @@
     }
   ],
   "ciencias": [
+    {
+      "professor": "Fábio",
+      "disciplina": "ciencia",
+      "titulo": "Teoria Evolutivaa",
+      "pontuacao": "1",
+      "peso": "1",
+      "comando": "Segundo joãozinho, que animal representa o heroi Batman ?",
+      "resposta": "Morcegoo",
+      "pergunta_n1": "Raposa de nove caldas",
+      "pergunta_n2": "Astelopiteco",
+      "pergunta_n3": "Ratinho de laboratório",
+      "id": 1,
+      "materia": "2"
+    },
+    {
+      "professor": "Marcelo",
+      "disciplina": "ciencia",
+      "titulo": "Observações Gerais",
+      "pontuacao": "2",
+      "peso": "2",
+      "comando": "Quantas faces possui o boneco do \"sentimento\" ?",
+      "resposta": "Duas - Feliz e com raiva",
+      "pergunta_n1": "Uma - Feliz",
+      "pergunta_n2": "Três - Feliz, raiva e confuso",
+      "pergunta_n3": "Quatro - Feliz, raiva, confuso e tristão",
+      "id": 2
+    }
   ],
-  "historia": [
-  ],
-  "geografia": [
-  ],
-  "ingles":[
-  ]
+  "historia": [],
+  "geografia": [],
+  "ingles": []
 }

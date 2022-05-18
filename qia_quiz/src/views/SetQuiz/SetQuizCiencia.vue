@@ -67,7 +67,7 @@
 
       <div class="d-flex justify-content-evenly mt-3">
         <div>
-          <router-link to="/SetQuizMatematica">
+          <router-link to="/SetQuizPortugues">
             <button type="button" class="btn btn-primary btn-lg" @click="salvarQuiz()">Finalizar e criar mais questões</button>
           </router-link>
         </div>
@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import BackButton from "@/components/BackButton/BackButton.vue";
+import BackButton from "../../components/BackButton/BackButton.vue";
 import "./styles.css";
 import { useRouter, useRoute } from 'vue-router'
 import axios from "axios";
@@ -130,7 +130,7 @@ export default {
     // Receber os valores referentes aos quizes
     async receberQuiz() {
       try {
-        const res = await axios.get(`http://localhost:3000/portugues`);
+        const res = await axios.get(`http://localhost:3000/ciencias`);
 
         this.items = res.data;
       } catch (error) {
@@ -141,7 +141,8 @@ export default {
     // Receber os valores referentes aos quizes
     async editarQuiz(id) {
         try {
-          const data = await axios.patch(`${`http://localhost:3000/portugues`}/${id}`,{});
+          const data = await axios.patch(`${`http://localhost:3000/ciencias`}/${id}`,{});
+
           this.items = data.data
         }catch (error) {
           console.error(error);
@@ -166,7 +167,7 @@ export default {
       if(this.routes.params.id){
         // Caso nosso o valor do nosso select seja = portugues
         try {
-          const data = await axios.put(`${`http://localhost:3000/portugues`}/${this.routes.params.id}`, this.items)
+          const data = await axios.put(`${`http://localhost:3000/ciencias`}/${this.routes.params.id}`, this.items)
           
           return data
         } catch (error) {
@@ -221,10 +222,6 @@ export default {
         }
       }
     },
-
-    finalizarCriarMais(){
-
-    }
   },
 };
 </script>
