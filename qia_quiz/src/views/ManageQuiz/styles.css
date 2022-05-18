@@ -1,20 +1,21 @@
-.manage{
+.manage-quiz{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 80%;
 }
 
-.manage nav{
+.manage-quiz nav{
   background: #fff;
   padding: 20px;
-  border-radius: 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.manage h3{
+.manage-quiz h3{
   margin-left: 10px;
 }
 
-.manage tbody, .manage thead{
+.manage-quiz tbody, .manage-quiz thead{
   background: #fff;
 }

@@ -13,7 +13,7 @@
         v-model="password"
         :type="passwordFieldType"
         class="form-control"
-        placeholder="Insira a sua senha"
+        placeholder="Insira a senha do sistema"
       />
       <span class="input-group-text">
         <button type="password" @click="switchVisibility">

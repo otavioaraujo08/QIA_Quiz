@@ -18,3 +18,25 @@
   .student tbody, .student thead{
     background: #fff;
   }
+
+  .student-quiz {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .student-quiz nav{
+    background: #fff;
+    padding: 20px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  
+  .student-quiz h3{
+    margin-left: 10px;
+  }
+  
+  .student-quiz tbody, .student-quiz thead{
+    background: #fff;
+  }

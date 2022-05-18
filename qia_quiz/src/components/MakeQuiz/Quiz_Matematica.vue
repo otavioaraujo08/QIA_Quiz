@@ -1,5 +1,5 @@
 <template>
-  <div class="student">
+  <div class="student-quiz">
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-book"></i>

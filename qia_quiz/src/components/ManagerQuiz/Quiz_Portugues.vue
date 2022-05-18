@@ -1,5 +1,5 @@
 <template>
-  <div class="manage">
+  <div class="manage-quiz">
     <nav class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center">
         <i class="fa-solid fa-gear"></i>
@@ -9,7 +9,6 @@
         <h3>Professor</h3>
       </div>
     </nav>
-    <hr>
     <table class="table">
       <thead>
         <tr>
@@ -32,6 +31,7 @@
         </tr>
       </tbody>
     </table>
+    <hr>
   </div>
 </template>
 
