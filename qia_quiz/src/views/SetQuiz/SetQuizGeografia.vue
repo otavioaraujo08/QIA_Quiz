@@ -33,7 +33,7 @@
 
     <div class="input-group mb-3">
       <span class="input-group-text" id="basic-addon1">Título     {{this.escolha}} </span>
-      <input v-model="items.titulo" type="text" class="form-control" placeholder="Título do quiz" aria-label="Username" aria-describedby="basic-addon1">
+      <input v-model="items.titulo" type="text" class="form-control" placeholder="Título da questão" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
     <div class="form-floating">
